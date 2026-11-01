@@ -1,0 +1,12 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node / Vue
+node_modules/
+dist/
+.env
+
+# OS bestanden
+.DS_Store
