@@ -1,4 +1,4 @@
-# ☁️ PiCloud: Eigen IaaS Cloud op een Raspberry Pi (Deel 1)
+#   PiCloud: Eigen IaaS Cloud op een Raspberry Pi (Deel 1)
 
 Dit logboek beschrijft de eerste stappen voor het bouwen van een eigen Infrastructure as a Service (IaaS) platform op een Raspberry Pi. We zetten Docker op als hypervisor, bouwen een Python FastAPI backend om containers te beheren, en maken een Vue.js frontend voor het dashboard.
 
@@ -223,7 +223,7 @@ onMounted(fetchInstances)
 
 <template>
   <div class="dashboard">
-    <h1>☁️ PiCloud Control Panel</h1>
+    <h1>  PiCloud Control Panel</h1>
     
     <button class="btn-create" @click="createInstance" :disabled="loading">
       {{ loading ? '⏳ Container aanmaken...' : '🚀 + Nieuwe Instance' }}
@@ -296,7 +296,7 @@ Het dashboard is nu toegankelijk, en je kunt direct nieuwe instances lanceren!
 ![Frontend Dashboard](images/image-2.png)
 
 
-# ☁️ PiCloud: Eigen IaaS Cloud op een Raspberry Pi (Deel 2)
+#   PiCloud: Eigen IaaS Cloud op een Raspberry Pi (Deel 2)
 
 In dit tweede deel maken we ons IaaS-platform geavanceerder. We breiden de backend en frontend uit zodat we het besturingssysteem kunnen kiezen, hardware-limieten (RAM en CPU) kunnen instellen, en de instances van buitenaf kunnen benaderen via SSH door middel van *Port Forwarding*.
 
@@ -459,7 +459,7 @@ onMounted(fetchInstances)
 
 <template>
   <div class="dashboard">
-    <h1>☁️ PiCloud Control Panel</h1>
+    <h1>  PiCloud Control Panel</h1>
     
     <div class="create-card">
       <h3>Nieuwe Instance Configuratie</h3>
@@ -557,7 +557,7 @@ ssh root@<JOUW_PI_IP> -p <GEGENEREERDE_POORT>
 ![Dashboard met Port Forwarding](images/image-3.png)
 
 
-# ☁️ PiCloud: Eigen IaaS Cloud op een Raspberry Pi (Deel 3)
+#   PiCloud: Eigen IaaS Cloud op een Raspberry Pi (Deel 3)
 
 In dit derde deel tillen we PiCloud naar een professioneel Enterprise-niveau. We breiden de API uit met lifecycle management (starten, stoppen, verwijderen van instances) en geven de Vue.js frontend een complete make-over, geïnspireerd op de klassieke *Apache CloudStack* interface. Tot slot voegen we live status-updates toe.
 
@@ -776,7 +776,7 @@ onUnmounted(() => { clearInterval(pollingInterval) })
         <ul class="nav-list">
           <li class="nav-item">Dashboard</li>
           <li :class="['nav-item', { active: currentView === 'instances' }]" @click="currentView = 'instances'">
-            ☁️ Instances
+              Instances
           </li>
           <li :class="['nav-item', { active: currentView === 'create' }]" @click="currentView = 'create'">
             ➕ Nieuwe Instance
@@ -948,7 +948,7 @@ Open het dashboard en test de nieuwe functionaliteit:
 Maak een instance aan, pauzeer deze via de `||` knop, start hem weer op met `▶`, of gooi hem helemaal weg met het kruisje `✖`.
 
 ![Nieuwe Enterprise CloudStack UI](images/image-4.png)
-# ☁️ PiCloud: Eigen IaaS Cloud op een Raspberry Pi (Deel 4 - UI Overhaul)
+#   PiCloud: Eigen IaaS Cloud op een Raspberry Pi (Deel 4 - UI Overhaul)
 
 In deze fase van het PiCloud project focussen we ons volledig op de **User Interface (UI)** en de **User Experience (UX)**. We transformeren het standaard dashboard naar een op maat gemaakte, professionele interface die naadloos aansluit bij moderne portfolio-designs. 
 
@@ -1317,7 +1317,7 @@ tr:last-child td { border-bottom: none; }
 ```
 
 
-# ☁️ PiCloud: Eigen IaaS Cloud op een Raspberry Pi (Deel 5 - Security & Lokaal Domein)
+#   PiCloud: Eigen IaaS Cloud op een Raspberry Pi (Deel 5 - Security & Lokaal Domein)
 
 In dit afrondende deel van het PiCloud-project maken we de backend robuuster en veiliger voor productiegebruik. We introduceren custom instance-namen, beveiligen het beheer via Docker-labels en koppelen het dashboard tot slot aan een professionele lokale domeinnaam via Pi-hole.
 
